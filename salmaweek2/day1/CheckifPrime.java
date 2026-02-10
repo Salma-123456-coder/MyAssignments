@@ -3,20 +3,25 @@ package salmaweek2.day1;
 public class CheckifPrime {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		int input=21;
-		
-		int output=input%2;
-		
-		if (output==0)
-			
-			System.out.println(input  + "is not a prime number");
-		
-		else
-			
-			System.out.println(input  + "is a prime number");
 
-	}
+        int n = 23;       // Number to check
+        int count = 0;    // Counts how many times n is divisible
 
+        for (int i = 1; i <= n; i++) {
+        	
+          // Check if n is divisible by i
+            if (n % i == 0) {
+                count++; // Increase count when a divisor is found
+            }
+        }
+
+     // A prime number has exactly 2 divisors: 1 and itself
+        if (count == 2) {
+            System.out.println(n + " is a Prime Number");
+        } else {
+            System.out.println(n + " is not a Prime Number");
+        }
+    }
 }
+
+
